@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Navarro_DeLeon_Diego_DASP_Tarea02.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="actividad-unidad-2-digitalizacion-aplicada-a-los-sectores-productivos">Actividad Unidad 2: Digitalizacion aplicada a los sectores productivos.</h1>
+<h2 id="parte-1-analisis-y-aplicacion-de-thd">Parte 1: Analisis y aplicacion de THD</h2>
+<h3 id="1-cinco-tecnologias-habilitadoras-digitales-thd-y-su-aplicacion-en-la-industria">1. Cinco tecnologias habilitadoras digitales (THD) y su aplicacion en la industria</h3>
+<ul>
+<li><strong>Internet de las Cosas (IoT):</strong> Consiste en conectar sensores y dispositivos fisicos a internet para recoger datos en tiempo real. En la industria se usa para monitorizar el estado de la maquinaria y prevenir averias antes de que ocurran.</li>
+<li><strong>Inteligencia Artificial (IA) y Big Data:</strong> Sirven para analizar grandes volumenes de datos y tomar decisiones o predecir patrones. En las fabricas ayudan a optimizar la ruta de transporte de materiales y prever la demanda de los clientes.</li>
+<li><strong>Computacion en la Nube (Cloud Computing):</strong> Permite guardar informacion y ejecutar aplicaciones en servidores remotos accesibles desde cualquier sitio. Ayuda a las empresas a compartir datos entre sedes sin necesidad de tener grandes servidores locales.</li>
+<li><strong>Robotica Avanzada y Cobots:</strong> Son robots colaborativos diseñados para trabajar codo a codo con los empleados. Se aplican en lineas de montaje para tareas repetitivas o peligrosas, mejorando la seguridad del trabajador.</li>
+<li><strong>Gemelos Digitales (Digital Twins):</strong> Son replicas virtuales de un objeto o proceso fisico. Se usan para probar cambios en la produccion o simular fallos sin poner en riesgo la planta real.</li>
+</ul>
+<h3 id="2-impulso-a-nuevos-productos-y-servicios">2. Impulso a nuevos productos y servicios</h3>
+<p>Las THD permiten que las empresas pasen de vender solo productos fisicos a ofrecer servicios continuos basados en datos (servitizacion). Al tener informacion en tiempo real de como el usuario utiliza el producto, la empresa puede lanzar mejoras constantes o crear lineas de negocio totalmente nuevas.</p>
+<ul>
+<li><strong>Ejemplo concreto:</strong> Un fabricante de motores de avion ya no solo vende el motor, sino que vende &quot;horas de vuelo&quot;. Gracias a sensores IoT instalados en el motor, monitorizan el rendimiento en el aire y cobran al cliente por el uso real, ofreciendo el mantenimiento predictivo como un servicio incluido.</li>
+</ul>
+<h3 id="3-relacion-entre-thd-y-economia-sostenible-y-eficiente">3. Relacion entre THD y economia sostenible y eficiente</h3>
+<p>Las THD optimizan el consumo de recursos como agua, electricidad y materias primas. Al medir todo al milimetro, evitamos el desperdicio y reducimos la huella de carbono, logrando procesos mas limpios y eficientes.</p>
+<ul>
+<li><strong>Ejemplo:</strong> En la agricultura de precision se usan sensores de humedad en el suelo y drones. Asi, el agricultor solo riega y fertiliza la zona exacta que lo necesita, ahorrando agua y evitando contaminar el terreno con exceso de quimicos.</li>
+</ul>
+<h3 id="4-dos-nuevos-mercados-surgidos-gracias-a-las-thd">4. Dos nuevos mercados surgidos gracias a las THD</h3>
+<ul>
+<li><strong>Mercado de las Ciudades Inteligentes (Smart Cities):</strong> Ha surgido para gestionar de forma conectada la movilidad, los residuos y el alumbrado publico. Su impacto ha sido enorme al mejorar la calidad de vida urbana y reducir el consumo energetico de los municipios.</li>
+<li><strong>Mercado de las Plataformas de Movilidad como Servicio (MaaS):</strong> Aplicaciones que integran transporte publico, patinetes, bicis y coches compartidos en un solo pago y ruta. Ha cambiado la forma en que nos desplazamos por la ciudad sin necesidad de tener un vehiculo propio.</li>
+</ul>
+<h3 id="5-impacto-de-las-thd-en-negocio-y-planta-en-una-empresa-manufacturera">5. Impacto de las THD en negocio y planta en una empresa manufacturera</h3>
+<ul>
+<li><strong>En la parte de negocio (oficinas/gestion):</strong> Mejora la toma de decisiones porque la directiva tiene datos actualizados al instante sobre ventas, costes y stock. Permite reaccionar rapido a cambios del mercado.</li>
+<li><strong>En la parte de planta (fabricacion):</strong> Automatiza tareas, reduce errores humanos y minimiza las paradas de produccion por averias. La fabrica se vuelve mas flexible para hacer lotes de productos personalizados.</li>
+</ul>
+<h3 id="6-dos-mejoras-especificas-en-entornos-it-y-ot">6. Dos mejoras especificas en entornos IT y OT</h3>
+<ul>
+<li><strong>Mejora en IT (Tecnologia de la Informacion):</strong> Integracion total de datos y centralizacion de sistemas ERP/CRM en la nube, lo que facilita el trabajo remoto y la ciberseguridad unificada.</li>
+<li><strong>Mejora en OT (Tecnologia Operativa):</strong> Visibilidad en tiempo real de lo que pasa en cada maquina de la fabrica gracias a la sensorizacion, reduciendo drasticamente los tiempos de inactividad no planificados.</li>
+</ul>
+<hr>
+<h2 id="punto-2-informe-sobre-thd-en-una-empresa-tecnologica">Punto 2: Informe sobre THD en una empresa tecnologica</h2>
+<p><em>(Para este apartado he tomado como referencia una empresa tecnologica de fabricacion de componentes y sistemas tecnologicos como Siemens o similar).</em></p>
+<h3 id="1-las-cinco-thd-clave-aplicadas-en-la-empresa">1. Las cinco THD clave aplicadas en la empresa</h3>
+<ul>
+<li><strong>Big Data:</strong> Analisis de los datos generados por toda la maquinaria para optimizar la cadena de suministro.</li>
+<li><strong>IoT Industrial:</strong> Conexion de todas las lineas de ensamblaje para monitorizar la velocidad y calidad del producto.</li>
+<li><strong>Ciberseguridad:</strong> Proteccion de las redes operativas frente a posibles ataques ciberneticos que puedan parar la produccion.</li>
+<li><strong>Realidad Aumentada:</strong> Uso de gafas de realidad aumentada para que los tecnicos de mantenimiento vean instrucciones superpuestas mientras reparan equipos.</li>
+<li><strong>Nube Hibrida:</strong> Almacenamiento seguro de proyectos R+D en la nube manteniendo los datos criticos en servidores locales.</li>
+</ul>
+<h3 id="2-desarrollo-de-nuevos-productosservicios-y-ejemplo">2. Desarrollo de nuevos productos/servicios y ejemplo</h3>
+<p>Las THD ayudan a esta empresa a diseñar productos mas rapido gracias a la simulacion virtual y a conectarlos a la nube para ofrecer soporte continuo.</p>
+<ul>
+<li><strong>Ejemplo:</strong> La creacion de un software de gestion energetica para fabricas que no solo vende la maquinaria, sino una suscripcion mensual a una plataforma que le dice al cliente como gastar menos luz cada dia.</li>
+</ul>
+<h3 id="3-sostenibilidad-y-ejemplo">3. Sostenibilidad y ejemplo</h3>
+<p>Las tecnologias permiten a la empresa reducir su huella ecologica al aprovechar mejor los materiales en la fase de diseño.</p>
+<ul>
+<li><strong>Ejemplo:</strong> El uso de simulaciones por ordenador evita tener que fabricar decenas de prototipos fisicos de plastico y metal que luego terminarian en la basura.</li>
+</ul>
+<h3 id="4-dos-nuevos-mercados-e-impacto">4. Dos nuevos mercados e impacto</h3>
+<ul>
+<li><strong>Mercado del Mantenimiento Predictivo como Servicio:</strong> Las empresas ya no esperan a que algo se rompa, contratan servicios que avisan antes. Impacta reduciendo costes industriales a nivel global.</li>
+<li><strong>Mercado de la Gestion de Energeticas Renovables Inteligentes:</strong> Redes de distribucion de energia gestionadas por IA. Su impacto es clave para poder integrar paneles solares y eolicos de forma estable.</li>
+</ul>
+<h3 id="5-impacto-en-negocio-y-planta">5. Impacto en negocio y planta</h3>
+<ul>
+<li><strong>Negocio:</strong> Se reducen los costes operativos y se automatiza la facturacion y la relacion con los proveedores.</li>
+<li><strong>Planta:</strong> Las lineas de produccion se adaptan automaticamente a la demanda sin tener que reprogramar cada maquina manualmente.</li>
+</ul>
+<h3 id="6-dos-mejoras-en-it-y-ot">6. Dos mejoras en IT y OT</h3>
+<ul>
+<li><strong>IT:</strong> Implementacion de almacenamiento elastico en la nube, lo que evita gastar dinero en servidores que se quedan viejos rapido.</li>
+<li><strong>OT:</strong> Mayor precision en la calibracion de herramientas robots gracias a sensores de alta precision.</li>
+</ul>
+<h3 id="7-departamentos-de-it-y-seleccion-de-tecnologias-para-planta-y-negocio">7. Departamentos de IT y seleccion de tecnologias para planta y negocio</h3>
+<ul>
+<li><strong>Departamentos tipicos del entorno IT:</strong>
+<ul>
+<li>Departamento de Sistemas e Infraestructura.</li>
+<li>Departamento de Desarrollo de Software.</li>
+<li>Departamento de Ciberseguridad.</li>
+<li>Departamento de Soporte Tecnico.</li>
+</ul>
+</li>
+<li><strong>Tecnologias para la planta (OT):</strong> Sensores IoT industriales, PLCs avanzados, cobots, gemelos digitales y redes industriales como PROFINET.</li>
+<li><strong>Tecnologias para el negocio (IT):</strong> Sistemas ERP (como SAP), plataformas CRM en la nube, herramientas de Business Intelligence y suites de trabajo colaborativo.</li>
+</ul>
+<h3 id="8-importancia-de-la-conexion-itot-y-ventajas-de-la-digitalizacion-de-extremo-a-extremo">8. Importancia de la conexion IT/OT y ventajas de la digitalizacion de extremo a extremo</h3>
+<p>Historicamente, la oficina (IT) y la fabrica (OT) trabajaban como islas separadas. Conectar ambos entornos es fundamental porque permite que un pedido registrado en el sistema de ventas pase directamente a la linea de montaje sin intermediarios ni papeleo manual.</p>
+<p><strong>Ventajas de la digitalizacion de extremo a extremo:</strong></p>
+<ul>
+<li><strong>Trazabilidad total:</strong> Se puede rastrear un producto desde que entra la materia prima hasta que llega al cliente final.</li>
+<li><strong>Respuesta rapida:</strong> Si hay un problema en la fabrica, el equipo de ventas lo sabe al instante y puede avisar a los clientes.</li>
+<li><strong>Reduccion de costes y errores:</strong> Se elimina la duplicidad de tareas y la introduccion manual de datos que suele provocar fallos.</li>
+<li><strong>Flexibilidad:</strong> Facilidad para cambiar la produccion segun los gustos del mercado en tiempo record.</li>
+</ul>
+
+</body>
+</html>
